@@ -1,0 +1,46 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block 'title' %}Cadastro{% endblock 'title' %}
+
+{% block 'scripts' %}
+<link rel="stylesheet" href="{% static 'css/usuarios/login.css'%}">
+<link rel="stylesheet" href="{% static 'css/edicao.css'%}">
+<script src="{% static 'scripts/edicao.js'%}"></script>
+
+{% endblock 'scripts' %}
+
+{% block 'layout' %}
+
+<div class="conteudo">
+    <div class="titulo">
+        <img src="{% static 'img/logoComContorno.png' %}" class="logo" alt="Logo black quartz">
+        <h2>Black quartz</h2>
+    </div>
+    <form action="{% url 'cadastro' %}" method="POST" id="cadastro">{% csrf_token %}
+        <div class="col-md">
+            <div class="input-label-flutuante medio">
+                <input type="text" id="nomeCompleto" name="nomeCompleto" required placeholder="Digite seu nome">
+                <label for="nomeCompleto">Nome completo</label>
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="input-label-flutuante medio">
+                <input type="email" id="email" name="email" required placeholder="Digite seu email">
+                <label for="usuario">Email</label>
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="input-label-flutuante medio">
+                <input type="password" id="senha" name="senha" minlength="8" required placeholder="Digite sua senha">
+                <label for="usuario" id="teste">Senha</label>
+            </div>
+        </div>
+        <div class="col-md acoes">
+            <button type="submit" form="cadastro" class="btn btn-success">Cadastrar-se</button>
+            <a href="{% url 'login' %}" class="btn btn-primary">Login</a>
+        </div>
+    </form>
+</div>
+
+{% endblock 'layout' %}

@@ -1,0 +1,58 @@
+:root {
+    --main-color: #1c0723;
+    --dark-color: #1c0739;
+    --light-color: #1c0784;
+    --contrast-color: white;
+    --contrast-color-opacity: rgba(255, 255, 255, 0.6);
+    --differencial-color: #1c075c;
+    --danger-color: #dc3545;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: var(--dark-color);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: var(--contrast-color);
+    margin: 0px;
+}
+
+a,
+a:hover {
+    color: var(--contrast-color);
+}
+
+.space {
+    flex: 1 1 100px;
+}
+
+.invisivel {
+    display: none;
+}
+
+.logo {
+    width: 64px;
+    margin-right: 10px;
+}
+
+.btn-primary {
+    background-color: var(--light-color);
+    color: var(--contrast-color);
+    border-color: var(--light-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--differencial-color);
+    border-color: var(--differencial-color);
+}
