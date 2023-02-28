@@ -14,14 +14,20 @@
 
 <div class="conteudo">
     <div class="titulo">
-        <img src="{% static 'img/logoComContorno.png' %}" class="logo" alt="Logo black quartz">
-        <h2>Emerald</h2>
+        <h2>Cadastro</h2>
     </div>
     <form action="{% url 'cadastro' %}" method="POST" id="cadastro">{% csrf_token %}
         <div class="col-md">
             <div class="input-label-flutuante medio">
                 <input type="text" id="nomeCompleto" name="nomeCompleto" required placeholder="Digite seu nome">
                 <label for="nomeCompleto">Nome completo</label>
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="input-label-flutuante medio">
+                <input type="text" id="cpf_cnpj" name="cpf_cnpj" class="cpf_cnpj" required maxlength="18"
+                    placeholder="Digite seu CNPJ">
+                <label for="cpf_cnpj">Digite seu CNPJ</label>
             </div>
         </div>
         <div class="col-md">
