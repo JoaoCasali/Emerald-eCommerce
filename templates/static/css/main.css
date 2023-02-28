@@ -1,11 +1,13 @@
 :root {
-    --main-color: #1c0723;
-    --dark-color: #1c0739;
-    --light-color: #1c0784;
+    --main-color: #4b6a20;
+    --dark-color: #638a2c;
+    --light-color: #8abb48;
     --contrast-color: white;
     --contrast-color-opacity: rgba(255, 255, 255, 0.6);
-    --differencial-color: #1c075c;
+    --differencial-color: #74a334;
     --danger-color: #dc3545;
+    --success-color: #1c0784;
+    --succes-differencial-color: #1c075c;
 }
 
 * {
@@ -44,6 +46,17 @@ a:hover {
 .logo {
     width: 64px;
     margin-right: 10px;
+}
+
+.btn-success {
+    background-color: var(--success-color);
+    color: var(--contrast-color);
+    border-color: var(--success-color);
+}
+
+.btn-success:hover {
+    background-color: var(--succes-differencial-color);
+    border-color: var(--succes-differencial-color);
 }
 
 .btn-primary {
