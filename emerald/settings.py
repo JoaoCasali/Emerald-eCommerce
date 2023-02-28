@@ -18,6 +18,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'usuarios',
+    'produtos',
 ]
 
 MIDDLEWARE = [
@@ -56,6 +57,8 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+AUTH_USER_MODEL = 'usuarios.Cliente'
 
 AUTH_PASSWORD_VALIDATORS = [
     {
