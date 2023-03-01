@@ -33,26 +33,26 @@ Bem como que o Administrador do site seja capaz do mesmo. </p>
 
 <h3> 🛠️ Install </h3>
 
-Clone this repository to your local machine.
+Clone esse repositório em sua máquina.
 ```bash
-$ git clone [https://github.com/JoaoCasali/BlackQuartz-Gestao.git](https://github.com/JoaoCasali/Emerald-eCommerce.git)
+$ git clone https://github.com/JoaoCasali/Emerald-eCommerce.git
 ```
-Create a virtualenv and activate it.
+Crie uma virtualenv e ative ela.
 ```bash
 $ python -m venv venv
 ```
 ```bash
 $ venv\Script\activate
 ```
-install the dependencies:
+Instale as dependências:
 ```bash
 $ pip install -r requirements.txt
 ```
-Start the server:
+Inicie o servidor:
 ```bash
 $ python manage.py runserver
 ```
->**have a good time!😁**
+>**Divirta-se!😁**
 
 <h3> 💻 Autores 💻 </h3>
 
