@@ -2,7 +2,7 @@
     --main-color: #4b6a20;
     --dark-color: #638a2c;
     --light-color: #8abb48;
-    --contrast-color: white;
+    --contrast-color: rgb(230, 230, 230);
     --contrast-color-opacity: rgba(255, 255, 255, 0.6);
     --differencial-color: #74a334;
     --danger-color: #dc3545;
@@ -26,7 +26,7 @@ h1,
 h2,
 h3,
 h4 {
-    color: var(--contrast-color);
+    color: var(--main-color);
     margin: 0px;
 }
 
@@ -54,7 +54,8 @@ a:hover {
     border-color: var(--success-color);
 }
 
-.btn-success:hover {
+.btn-success:hover,
+.btn-success:active {
     background-color: var(--succes-differencial-color);
     border-color: var(--succes-differencial-color);
 }
@@ -65,7 +66,8 @@ a:hover {
     border-color: var(--light-color);
 }
 
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-primary:active {
     background-color: var(--differencial-color);
     border-color: var(--differencial-color);
 }
