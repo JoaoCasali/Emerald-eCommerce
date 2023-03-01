@@ -1,4 +1,4 @@
-<h1> 💎 Emerald-eCommerce 💎 </h1>
+<h1> 💎 E-merald 💎 </h1>
 
 
 <p>
