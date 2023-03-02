@@ -90,4 +90,13 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'templates/static'),)
 STATIC_ROOT = os.path.join('static')
 
+MEDIA_URL = 'media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, MEDIA_URL)
+
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Limpa a sessão quando o browser é fechado
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+
+# expira os cookies em uma hora
+SESSION_COOKIE_AGE = 3600
