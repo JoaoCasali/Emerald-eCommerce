@@ -26,8 +26,8 @@
 }
 
 .input-label-flutuante input {
-    background-color: var(--main-color);
-    color: var(--contrast-color);
+    background-color: var(--contrast-color);
+    color: var(--main-color);
     padding: 10px 15px;
     width: 100%;
     outline: none;
@@ -41,12 +41,12 @@
 .input-label-flutuante input:-webkit-autofill:focus {
     border: 2px solid var(--light-color);
     outline: none;
-    -webkit-text-fill-color: var(--contrast-color);
-    -webkit-box-shadow: 0 0 0 30px var(--main-color) inset;
+    -webkit-text-fill-color: var(--main-color);
+    -webkit-box-shadow: 0 0 0 30px var(--contrast-color) inset;
 }
 
 .input-label-flutuante>label {
-    color: var(--contrast-color);
+    color: var(--main-color);
     position: absolute;
     top: 10px;
     left: 15px;
@@ -56,8 +56,8 @@
 
 .input-label-flutuante>input:focus+label,
 .input-label-flutuante>input:not(:placeholder-shown)+label {
-    color: var(--contrast-color-opacity);
-    background-color: var(--main-color);
+    color: var(--main-color);
+    background-color: var(--contrast-color);
     position: absolute;
     top: -10px;
     font-size: 1rem;

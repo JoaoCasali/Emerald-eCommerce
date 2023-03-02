@@ -2,7 +2,7 @@
     width: 25%;
     min-height: 300px;
     margin: auto auto;
-    background-color: var(--main-color);
+    background-color: var(--contrast-color);
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0px 0px 100px 30px var(--light-color);

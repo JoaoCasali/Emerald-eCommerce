@@ -14,6 +14,13 @@ $(document).ready(function () {
         }
     });
 
+    $('.cpf_cnpj').keypress(function (event) {
+        var tecla = event.which;
+        if (tecla != 8 && tecla != 0 && tecla != 45 && tecla != 47 && (tecla < 48 || tecla > 57)) {
+            event.preventDefault();
+        }
+    });
+
     // formatadores
     $('.decimal').blur(function () {
         var valor = parseFloat($(this).val()).toLocaleString('pt-BR', { minimumFractionDigits: 2 });
@@ -28,6 +35,26 @@ $(document).ready(function () {
         } else {
             $(this).val('');
         }
+    });
+
+    $(".cpf_cnpj").blur(function () {
+        var value = $(this).val();
+        value = value.replace(/[^0-9]/g, "");
+
+        var length = value.length;
+        var formatted_value = "";
+
+        if (length == 11) {
+            formatted_value = value.replace(/(\d{3})(\d{3})(\d{3})/, "$1.$2.$3-");
+        }
+        else if (length == 14) {
+            formatted_value = value.replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/, "$1.$2.$3/$4-$5");
+        }
+        else {
+            $(this).val("");
+        }
+
+        $(this).val(formatted_value);
     });
 });
 
