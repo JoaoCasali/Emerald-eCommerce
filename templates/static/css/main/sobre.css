@@ -1,0 +1,28 @@
+/* Efeitos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div {
+    text-align: center;
+    margin: 20px;
+}
+
+h1, h2, h3, p {
+    color: black;
+    
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 35px;
+}
+
+.apresentacao {
+    height: 400px;
+}

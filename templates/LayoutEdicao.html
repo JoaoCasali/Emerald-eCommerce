@@ -1,15 +1,6 @@
-{% extends 'index.html' %}
-{% load static %}
+{% extends 'index.html' %} {% load static %} {% block 'scripts' %}
 
-{% block 'scripts' %}
-
-<link rel="stylesheet" href="{% static 'css/edicao.css'%}">
+<link rel="stylesheet" href="{% static 'css/edicao.css'%}" />
 <script src="{% static 'scripts/edicao.js'%}"></script>
-
-{% endblock 'scripts' %}
-
-{% block 'layout' %}
-
-{% include 'shared/header.html' %}
-
+{% endblock 'scripts' %} {% include 'shared/header.html' %} {% block 'layout' %}
 {% endblock 'layout' %}
