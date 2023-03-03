@@ -65,8 +65,10 @@ def Logout(request):
     return redirect('login')
 
 
-def VerificarCNPJ(cnpj):
-    
+def VerificarCNPJ(request):
+
+    cnpj = request.GET.get('cnpj')
+
     cnpj_limpo = [int(char) for char in cnpj if char.isdigit()]
 
     # considera-se erro CNPJ's formados por uma sequencia de numeros iguais
@@ -76,9 +78,6 @@ def VerificarCNPJ(cnpj):
         cnpj_limpo == "99999999999999" or len(cnpj_limpo) != 14):
        
        return JsonResponse({"Resposta": False})
-
-    else:
-        True
 
     try:
         sm = 0
@@ -118,3 +117,7 @@ def VerificarCNPJ(cnpj):
             return JsonResponse({"Resposta": False})
     except ValueError:
         return JsonResponse({"Resposta": False})
+
+
+
+

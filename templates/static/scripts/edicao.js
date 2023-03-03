@@ -55,18 +55,16 @@ $(document).ready(function () {
         }
 
         $.ajax({
-            url: 'http://127.0.0.1:8000/auth/VerificarCNPJ',
+            url: 'http://127.0.0.1:8000/auth/VerificarCNPJ?cnpj=' + value,
             type: 'GET',
-            async: true,
+            async: false,
             dataType: 'json',
-            data: {
-                cnpj: value
-            },
             success: function(response) {
                 if (response.Resposta == false) {
                     alert('CNPJ inválido');
                     $('#cpf_cnpj').val('');
-                    
+                }else{
+                    $(this).val(formatted_value);
                 }
             },
             error: function(xhr, status, error) {
@@ -74,7 +72,6 @@ $(document).ready(function () {
             }
         });
 
-        $(this).val(formatted_value);
     });
 });
 
