@@ -1,0 +1,13 @@
+header {
+    display: flex;
+    background-color: var(--contrast-color);
+    border-bottom: 2px solid var(--main-color);
+    box-shadow: 10px 0px 10px var(--light-color);
+}
+
+header .logoContainer {
+    border-right: 2px solid var(--main-color);
+    padding: 3px;
+}
+
+/* header .logo {} */
