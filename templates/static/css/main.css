@@ -16,7 +16,6 @@
 }
 
 body {
-    background-color: var(--dark-color);
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -45,7 +44,6 @@ a:hover {
 
 .logo {
     width: 64px;
-    margin-right: 10px;
 }
 
 .btn-success {
