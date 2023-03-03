@@ -8,6 +8,14 @@
 
 {% endblock 'scripts' %}
 
-{% block 'header' %}{% include 'shared/header.html' %}{% endblock 'header' %}
 
-{% block 'layout' %}{% endblock 'layout' %}
+{% block 'layout' %}
+
+{% include 'shared/header.html' %}
+
+<div class="divisor">
+    {% block 'content' %}
+
+    {% endblock 'content' %}
+</div>
+{% endblock 'layout' %}
