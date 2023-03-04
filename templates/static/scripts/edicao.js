@@ -23,6 +23,9 @@ $(document).ready(function () {
 
     // formatadores
     $('.decimal').blur(function () {
+        if($(this).val() == ''){
+            return
+        }
         var valor = parseFloat($(this).val()).toLocaleString('pt-BR', { minimumFractionDigits: 2 });
         $(this).val(valor);
     });
@@ -83,3 +86,4 @@ function DefinirCampoComoOpcional(campo) {
     campo.removeAttr('required');
     campo.next('label').find('span').remove();
 }
+

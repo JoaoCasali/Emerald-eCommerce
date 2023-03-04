@@ -25,7 +25,27 @@
     margin-bottom: 15px;
 }
 
-.input-label-flutuante input {
+.descricao{
+
+    color: var(--main-color);
+
+}
+
+.input-label-flutuante textarea{
+
+    background-color: var(--contrast-color);
+    color: var(--main-color);
+    padding: 10px 15px;
+    width: 100%;
+    outline: none;
+    border: 2px solid var(--light-color);
+    border-radius: 10px;
+    font-size: 1.1rem;
+
+}
+
+
+.input-label-flutuante input{
     background-color: var(--contrast-color);
     color: var(--main-color);
     padding: 10px 15px;
