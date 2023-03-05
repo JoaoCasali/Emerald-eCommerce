@@ -5,24 +5,31 @@
     box-sizing: border-box;
 }
 
-div {
-    text-align: center;
-    margin: 20px;
-}
-
-h1, h2, h3, p {
+.titulo-maior, .titulo-medio, .titulo-menor, p {
     color: black;
-    
+    margin: 50px auto;
 }
 
-h1 {
+.titulo-maior {
     font-size: 50px;
 }
 
-h2 {
+.titulo-medio {
     font-size: 35px;
 }
 
+p {
+    width: 900px;
+    position: relative;
+    bottom: 20px;
+}
+
 .apresentacao {
-    height: 400px;
+    position: relative;
+    height: 500px;
+}
+
+.desenvolvedores {
+    width: 500px;
+    margin: 50px auto;
 }

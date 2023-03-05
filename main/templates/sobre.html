@@ -1,4 +1,4 @@
-{% extends 'index.html' %}
+{% extends 'LayoutListagem.html' %}
 {% load static %}
 
 {% block 'title' %}Sobre{% endblock 'title' %}
@@ -10,31 +10,31 @@
 
 {% endblock 'scripts' %}
 
-{% block 'layout' %}
-<div class="conteudo">
-    <div class="apresentacao">
-        <h1>O melhor e-commerce para a sua empresa</h1>
-        <h2>Fornecemos os melhores produtos para o seu negócio!</h2>
-        <p>
-            Em nosso e-commerce, vendemos produtos em grandes quantidades para outras empresas. 
-            Através de nossa plataforma online, oferecemos uma ampla variedade de produtos, desde alimentos e bebidas até produtos eletrônicos e materiais de construção. 
-            Nele nossos clientes podem fazer pedidos rapidamente e de forma fácil, podendo escolher os produtos desejados, quantidades e formas de pagamento.
-        </p>
-    </div>
-    <div class="desenvolvedores">
-        <h3>Neurónios criativos</h3>
-        <img src="{% static 'img/desenvolvedores.jpg' %}" alt="Desenvolvedores">
-    </div>
-    <div class="produto">
-        <h3>E-merald</h3>
-        <p>
-            Esmeralda é uma pedra preciosa de cor verde, que pertence à família mineral do berilo. 
-            Ela é uma das pedras mais valiosas do mundo, junto com o diamante, rubi e safira. 
-            A cor verde da esmeralda é devida à presença de cromo e vanádio em sua composição química. 
-            Dessa forma, tratamos nossos produtos como esmeraldas para nossos clientes.
-        </p>
-    </div>
-    {% endblock 'layout' %}
+{% block 'content' %}
+
+<div class="apresentacao">
+    <h1 class="titulo-maior">O melhor e-commerce para a sua empresa</h1>
+    <h2 class="titulo-medio">Fornecemos os melhores produtos para o seu negócio!</h2>
+    <p>
+        Em nosso e-commerce, vendemos produtos em grandes quantidades para outras empresas. 
+        Através de nossa plataforma online, oferecemos uma ampla variedade de produtos, desde alimentos e bebidas até produtos eletrônicos e materiais de construção. 
+        Nele nossos clientes podem fazer pedidos rapidamente e de forma fácil, podendo escolher os produtos desejados, quantidades e formas de pagamento.
+    </p>
 </div>
+<div class="desenvolvedores">
+    <h3 class="titulo-menor">Neurónios criativos</h3>
+    <img src="{% static 'img/desenvolvedores.jpg' %}" class="desenvolvedores" alt="Desenvolvedores">
+</div>
+<div class="produto">
+    <h3 class="titulo-menor">E-merald</h3>
+    <p>
+        Esmeralda é uma pedra preciosa de cor verde, que pertence à família mineral do berilo. 
+        Ela é uma das pedras mais valiosas do mundo, junto com o diamante, rubi e safira. 
+        A cor verde da esmeralda é devida à presença de cromo e vanádio em sua composição química. 
+        Dessa forma, tratamos nossos produtos como esmeraldas para nossos clientes.
+    </p>
+</div>
+
+{% endblock 'content' %}
 
 </html>
