@@ -32,7 +32,7 @@
 
 <script>
     function makeUrl(urlNova) {
-        var urlBase = "{{ request.META.HTTP_HOST }}";
+        var urlBase = "{{ BASE_URL }}";
         var urlConcatenada = urlBase + "/" + urlNova;
         return urlConcatenada
     }

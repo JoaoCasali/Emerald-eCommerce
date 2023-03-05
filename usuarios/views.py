@@ -18,7 +18,9 @@ def Cadastro(request):
     if user:
         return render(request, 'cadastro.html')
 
-    cpf_cnpj = ' '.join([int(digit) for digit in cpf_cnpj if digit.isdigit()])
+    cpfCnpjLimpo = [str(digit) for digit in cpf_cnpj if digit.isdigit()]
+
+    cpf_cnpj = ''.join(cpfCnpjLimpo)
 
     nome = nomeCompleto.split()[0]
     sobrenome = ' '.join(nomeCompleto.split()[1:])
@@ -35,6 +37,7 @@ def Cadastro(request):
 
 def Login(request):
     if request.method == "GET":
+        current = request.build_absolute_uri('/')
         return render(request, 'login.html')
 
     email = request.POST.get('email')
