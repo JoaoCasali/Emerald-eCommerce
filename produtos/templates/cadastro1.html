@@ -1,0 +1,52 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block 'title' %}Cadastro Produto{% endblock 'title' %}
+
+{% block 'scripts' %}
+
+<link rel="stylesheet" href="{% static 'css/usuarios/login.css'%}">
+<link rel="stylesheet" href="{% static 'css/edicao.css'%}">
+<script src="{% static 'scripts/edicao.js'%}"></script>
+
+{% endblock 'scripts' %}
+
+{% block 'layout' %}
+
+<div class="conteudo">
+    <div class="titulo">
+        <h2>Cadastro Produto</h2>
+    </div>
+    <form action="{% url 'cadastro' %}" method="POST" id="cadastroProduto">{% csrf_token %}
+        <div class="col-md">
+            <label class="descricao">Descrição</label>
+            <div class="input-label-flutuante medio">
+                <textarea type="text" id="descricaoProduto" name="descricaoProduto" placeholder="Descrição do Produto" required ></textarea>
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="input-label-flutuante medio">
+                <input type="text" id="abrevproduto" name="abrevproduto" class="abrevproduto"  placeholder="Abreviação do Produto" required>
+                <label for="abrevproduto">Abreviação</label>
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="input-label-flutuante medio">
+                <input type="text" class="decimal" id="preco" name="preco" placeholder="Digite o Preço" required >
+                <label for="preco">Preço</label>
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="input-label-flutuante medio">
+                <input type="file" id="imagem" name="imagem" accept="image/png, image/jpeg, image/gif" required>
+                <label for="imagem">Imagem</label>
+            </div>
+        </div>
+        <div class="col-md acoes">
+            <button type="submit" form="cadastro" class="btn btn-success">Cadastrar Produto</button>
+        </div>
+    </form>
+</div>
+
+
+{% endblock 'layout' %}
