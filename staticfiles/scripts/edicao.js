@@ -43,7 +43,9 @@ $(document).ready(function () {
     $(".cpf_cnpj").blur(function () {
         var value = $(this).val();
         value = value.replace(/[^0-9]/g, "");
-
+        if (value == '') {
+            return
+        }
         var length = value.length;
         var formatted_value = "";
 
@@ -58,7 +60,7 @@ $(document).ready(function () {
         }
 
         $.ajax({
-            url: makeUrl('Auth/VerificarCNPJ?cnpj=') + value,
+            url: makeUrl("Auth/VerificarCNPJ?cnpj=") + value,
             type: 'GET',
             async: false,
             dataType: 'json',

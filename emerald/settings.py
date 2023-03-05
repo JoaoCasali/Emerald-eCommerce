@@ -5,7 +5,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-+hs+!rmh=_e#7@5j)1&or10+92ccm&9uez-60b*voj9m-xb#@*'
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
@@ -46,6 +46,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'emerald.contextProcessors.Url.baseUrl',
             ],
         },
     },
