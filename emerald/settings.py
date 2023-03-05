@@ -5,10 +5,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-+hs+!rmh=_e#7@5j)1&or10+92ccm&9uez-60b*voj9m-xb#@*'
 
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ["*"]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -86,11 +85,16 @@ USE_I18N = True
 
 USE_TZ = True
 
-# Caminho dos arquivos estáticos
+# Caminho que é mostrado fora do django (não faz diferença)
 STATIC_URL = 'static/'
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'templates/static'),)
-STATIC_ROOT = os.path.join('static')
 
+# Caminho dos arquivos estáticos da produção
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Caminho dos arquivos estáticos dentro do projeto
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'templates/static'),)
+
+# Onde é salvo os arquivos de media salvos pelo usuário
 MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, MEDIA_URL)
 

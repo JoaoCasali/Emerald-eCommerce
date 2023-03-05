@@ -3,7 +3,9 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('auth/', include('usuarios.urls')),
-    path('auth/', include('produtos.urls')),
+    path('Auth/', include('usuarios.urls')),
+    path('Produtos/', include('produtos.urls')),
     path('', include('main.urls')),
 ]
+
+# handler404 = "main.views.PageNotFound"
