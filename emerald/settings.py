@@ -5,7 +5,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-+hs+!rmh=_e#7@5j)1&or10+92ccm&9uez-60b*voj9m-xb#@*'
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
@@ -29,6 +29,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
 ROOT_URLCONF = 'emerald.urls'
@@ -88,11 +89,13 @@ USE_TZ = True
 # Caminho que é mostrado fora do django (não faz diferença)
 STATIC_URL = 'static/'
 
-# Caminho dos arquivos estáticos da produção
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
 # Caminho dos arquivos estáticos dentro do projeto
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'templates/static'),)
+STATICFILES_DIRS = [
+    BASE_DIR / 'templates/static'
+]
+
+# Caminho dos arquivos estáticos da produção
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # Onde é salvo os arquivos de media salvos pelo usuário
 MEDIA_URL = 'media/'

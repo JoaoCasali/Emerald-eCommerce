@@ -5,4 +5,4 @@ def Home(request):
     return render(request, 'home.html')
 
 def PageNotFound(request, exception):
-    return render(request, 'notFound.css')
+    return render(request, 'notFound.html')
