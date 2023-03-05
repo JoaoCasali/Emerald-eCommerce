@@ -1,10 +1,29 @@
 {% extends 'index.html' %}
+{% load static %}
 
-{% block content %}
-  <h1>Produtos</h1>
-  <ul>
-    {% for produto in produtos %}
-      <li>{{ produto.nome }} - R$ {{ produto.preco }}</li>
-    {% endfor %}
-  </ul>
-{% endblock %}
+{% block 'title' %}Cadastro{% endblock 'title' %}
+
+{% block 'scripts' %}
+<link rel="stylesheet" href="{% static 'css/usuarios/login.css'%}">
+<link rel="stylesheet" href="{% static 'css/edicao.css'%}">
+<script src="{% static 'scripts/edicao.js'%}"></script>
+
+{% endblock 'scripts' %}
+
+{% block 'layout' %}
+
+<div class="conteudo">
+    <div class="titulo">
+        <h2>Produtos to no lugar certo?</h2>
+    </div>
+
+    <h1>List of Numbers</h1>
+<ul>
+{% for number in numbers %}
+    <li>{{ number }}</li>
+{% endfor %}
+</ul>
+
+</div>
+
+{% endblock 'layout' %}
