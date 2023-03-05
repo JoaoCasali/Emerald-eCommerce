@@ -30,7 +30,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     "whitenoise.middleware.WhiteNoiseMiddleware",
-    "emerald.middleware.CsrfExemptMiddleware",
+    "emerald.middleware.Csrf.CsrfExemptMiddleware",
 ]
 
 ROOT_URLCONF = 'emerald.urls'
