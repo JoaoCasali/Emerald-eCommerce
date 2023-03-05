@@ -3,6 +3,10 @@ from django.shortcuts import render, redirect
 from .models import Produto
 
 def product_list(request):
-    numbers = [1, 2, 3, 4, 5]
-    context = {'numbers': numbers}
-    return render(request, 'listagem.html', context)
+    List = Produto.objects.all()
+    return render(request, 'listagem.html', {'List': List})
+
+# def product_list(request):
+#     numbers = [1, 2, 3, 4, 5]
+#     context = {'numbers': numbers}
+#     return render(request, 'listagem.html', context)

@@ -1,7 +1,7 @@
-{% extends 'index.html' %}
+{% extends 'LayoutEdicao.html' %}
 {% load static %}
 
-{% block 'title' %}Cadastro{% endblock 'title' %}
+{% block 'title' %}Produtos{% endblock 'title' %}
 
 {% block 'scripts' %}
 <link rel="stylesheet" href="{% static 'css/usuarios/login.css'%}">
@@ -14,15 +14,32 @@
 
 <div class="conteudo">
     <div class="titulo">
-        <h2>Produtos to no lugar certo?</h2>
+        <h2>Produtos</h2>
     </div>
 
-    <h1>List of Numbers</h1>
-<ul>
-{% for number in numbers %}
-    <li>{{ number }}</li>
-{% endfor %}
-</ul>
+<table class="table table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Produto</th>
+            <th scope="col">Preço</th>
+            <th scope="col">Descrição</th>
+            <th scope="col">Imagem</th>
+        </tr>
+    </thead>
+
+    <tbody>
+    {% for value in List %}
+        <tr>
+            <th scope="row">{{value.id}}</th>
+            <th>{{value.abreviacao}}</th>
+            <th>{{value.preco}}</th>
+            <th>{{value.descricao}}</th>
+            <th>{{value.imagem}}</th>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
 
 </div>
 
