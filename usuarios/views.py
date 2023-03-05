@@ -2,8 +2,10 @@ from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from django.views.decorators.csrf import csrf_exempt
 from .models import Cliente
 
+@csrf_exempt
 def Cadastro(request):
     if request.method == "GET":
         return render(request, 'cadastro.html')
@@ -31,7 +33,7 @@ def Cadastro(request):
 
     return render(request, 'login.html')
 
-
+@csrf_exempt
 def Login(request):
     if request.method == "GET":
         return render(request, 'login.html')
