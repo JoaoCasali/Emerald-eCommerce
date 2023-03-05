@@ -4,6 +4,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from .models import Cliente
 
+
 def Cadastro(request):
     if request.method == "GET":
         return render(request, 'cadastro.html')
