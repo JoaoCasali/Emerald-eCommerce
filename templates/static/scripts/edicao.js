@@ -23,7 +23,7 @@ $(document).ready(function () {
 
     // formatadores
     $('.decimal').blur(function () {
-        if($(this).val() == ''){
+        if ($(this).val() == '') {
             return
         }
         var valor = parseFloat($(this).val()).toLocaleString('pt-BR', { minimumFractionDigits: 2 });
@@ -58,19 +58,19 @@ $(document).ready(function () {
         }
 
         $.ajax({
-            url: 'http://127.0.0.1:8000/auth/VerificarCNPJ?cnpj=' + value,
+            url: makeUrl('Auth/VerificarCNPJ?cnpj=') + value,
             type: 'GET',
             async: false,
             dataType: 'json',
-            success: function(response) {
+            success: function (response) {
                 if (response.Resposta == false) {
                     alert('CNPJ inválido');
                     $('#cpf_cnpj').val('');
-                }else{
+                } else {
                     $(this).val(formatted_value);
                 }
             },
-            error: function(xhr, status, error) {
+            error: function (xhr, status, error) {
                 alert(error);
             }
         });
@@ -86,4 +86,3 @@ function DefinirCampoComoOpcional(campo) {
     campo.removeAttr('required');
     campo.next('label').find('span').remove();
 }
-

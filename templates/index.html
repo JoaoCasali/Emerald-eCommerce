@@ -30,6 +30,14 @@
     <title>{% block 'title' %} {% endblock 'title' %}</title>
 </head>
 
+<script>
+    function makeUrl(urlNova) {
+        var urlBase = "{{ request.META.HTTP_HOST }}";
+        var urlConcatenada = urlBase + "/" + urlNova;
+        return urlConcatenada
+    }
+</script>
+
 <body>
     <!-- layout -->
     {% block 'layout' %} {% endblock 'layout' %}
