@@ -22,13 +22,13 @@ body {
     flex-direction: column;
 }
 
-/* h1,
+h1,
 h2,
 h3,
 h4 {
     color: var(--main-color);
     margin: auto;
-} */
+}
 
 a,
 a:hover {
