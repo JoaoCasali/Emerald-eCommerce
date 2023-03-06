@@ -1,4 +1,4 @@
-{% extends 'index.html' %}
+{% extends 'Layout.html' %}
 {% load static %}
 
 {% block 'title' %}Cadastro Produto{% endblock 'title' %}
@@ -12,7 +12,7 @@
 
 {% endblock 'scripts' %}
 
-{% block 'layout' %}
+{% block 'content' %}
 
 <div class="conteudo">
     <div class="titulo">
@@ -21,13 +21,14 @@
     <form action="{% url 'cadastro' %}" method="POST" id="cadastroProduto">{% csrf_token %}
         <div class="col-md">
             <div class="input-label-flutuante medio">
-                <input type="text" id="abrevproduto" name="abrevproduto" class="abrevproduto"  placeholder="Abreviação do Produto" required>
+                <input type="text" id="abrevproduto" name="abrevproduto" class="abrevproduto"
+                    placeholder="Abreviação do Produto" required>
                 <label for="abrevproduto">Abreviação</label>
             </div>
         </div>
         <div class="col-md">
             <div class="input-label-flutuante medio">
-                <input type="text" class="decimal" id="preco" name="preco" placeholder="Digite o Preço" required >
+                <input type="text" class="decimal" id="preco" name="preco" placeholder="Digite o Preço" required>
                 <label for="preco">Preço</label>
             </div>
         </div>
