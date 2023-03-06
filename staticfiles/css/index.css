@@ -1,0 +1,91 @@
+:root {
+    --main-color: #4b6a20;
+    --dark-color: #638a2c;
+    --light-color: #8abb48;
+    --contrast-color: rgb(230, 230, 230);
+    --contrast-color-opacity: rgba(255, 255, 255, 0.6);
+    --differencial-color: #74a334;
+    --danger-color: #dc3545;
+    --success-color: #1c0784;
+    --succes-differencial-color: #1c075c;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: var(--contrast-color);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: var(--main-color);
+    margin: auto;
+}
+
+a,
+a:hover {
+    color: var(--contrast-color);
+}
+
+.space {
+    flex: 1 1 100px;
+}
+
+.invisivel {
+    display: none;
+}
+
+.logo {
+    width: 64px;
+}
+
+.btn-success {
+    background-color: var(--success-color);
+    color: var(--contrast-color);
+    border-color: var(--success-color);
+}
+
+.btn-success:hover,
+.btn-success:active {
+    background-color: var(--succes-differencial-color);
+    border-color: var(--succes-differencial-color);
+}
+
+.btn-primary {
+    background-color: var(--light-color);
+    color: var(--contrast-color);
+    border-color: var(--light-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--differencial-color) !important;
+    border-color: var(--differencial-color) !important;
+}
+
+.btn-primary:active {
+    background-color: var(--dark-color) !important;
+    border-color: var(--dark-color) !important;
+}
+
+.divisor {
+    background: white;
+    min-height: auto;
+    margin-left: 70px;
+    border-left: 4px solid var(--main-color);
+    box-shadow: -2px 10px 30px var(--light-color);
+}
+
+@media (max-width: 991px) {
+    .divisor {
+        margin-left: 0;
+        border-left: none;
+    }
+}

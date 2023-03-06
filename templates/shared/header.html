@@ -29,9 +29,18 @@
                     </li>
                 </ul>
                 <span class="space"></span>
-                <div class="botoes">
+                <div class="contexto">
+                    {% if request.user.is_authenticated %}
+
+                    <p>Seja bem-vindo, {{ request.user.first_name}}</p>
+                    <a href="{% url 'logout' %}" class="btn btn-danger">Sair</a>
+
+                    {% else %}
+
                     <a href="{% url 'login' %}" class="btn btn-success">Entrar</a>
                     <a href="{% url 'cadastro' %}" class="btn btn-primary">Cadastrar-se</a>
+
+                    {% endif %}
                 </div>
             </div>
         </div>

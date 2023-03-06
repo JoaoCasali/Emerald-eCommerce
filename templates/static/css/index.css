@@ -27,7 +27,7 @@ h2,
 h3,
 h4 {
     color: var(--main-color);
-    margin: auto;
+    margin: 0px;
 }
 
 a,
@@ -77,8 +77,40 @@ a:hover {
 
 .divisor {
     background: white;
-    min-height: auto;
+    height: 100vh;
     margin-left: 70px;
     border-left: 4px solid var(--main-color);
     box-shadow: -2px 10px 30px var(--light-color);
+}
+
+.div-p {
+    width: 25%;
+}
+
+.div-m {
+    width: 50%;
+}
+
+.div-g {
+    width: 75%;
+}
+
+
+@media (max-width: 991px) {
+    .divisor {
+        margin-left: 0;
+        border-left: none;
+    }
+
+    .div-p {
+        width: 90%;
+    }
+
+    .div-m {
+        width: 90%;
+    }
+
+    .div-g {
+        width: 90%;
+    }
 }
