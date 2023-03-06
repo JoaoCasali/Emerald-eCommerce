@@ -1,5 +1,8 @@
+body {
+    background-color: var(--dark-color);
+}
+
 .conteudo {
-    width: 25%;
     min-height: 300px;
     margin: auto auto;
     background-color: var(--contrast-color);

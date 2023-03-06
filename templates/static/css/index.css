@@ -16,7 +16,7 @@
 }
 
 body {
-    background-color: var(--dark-color);
+    background-color: var(--contrast-color);
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -45,7 +45,6 @@ a:hover {
 
 .logo {
     width: 64px;
-    margin-right: 10px;
 }
 
 .btn-success {
@@ -66,8 +65,52 @@ a:hover {
     border-color: var(--light-color);
 }
 
-.btn-primary:hover,
+.btn-primary:hover {
+    background-color: var(--differencial-color) !important;
+    border-color: var(--differencial-color) !important;
+}
+
 .btn-primary:active {
-    background-color: var(--differencial-color);
-    border-color: var(--differencial-color);
+    background-color: var(--dark-color) !important;
+    border-color: var(--dark-color) !important;
+}
+
+.divisor {
+    background: white;
+    height: 100vh;
+    margin-left: 70px;
+    border-left: 4px solid var(--main-color);
+    box-shadow: -2px 10px 30px var(--light-color);
+}
+
+.div-p {
+    width: 25%;
+}
+
+.div-m {
+    width: 50%;
+}
+
+.div-g {
+    width: 75%;
+}
+
+
+@media (max-width: 991px) {
+    .divisor {
+        margin-left: 0;
+        border-left: none;
+    }
+
+    .div-p {
+        width: 90%;
+    }
+
+    .div-m {
+        width: 90%;
+    }
+
+    .div-g {
+        width: 90%;
+    }
 }

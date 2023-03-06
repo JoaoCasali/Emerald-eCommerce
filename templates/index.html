@@ -22,13 +22,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 
     <!-- css padrão -->
-    <link rel="stylesheet" href="{% static 'css/main.css'%}">
+    <link rel="stylesheet" href="{% static 'css/index.css'%}">
 
     <!-- bloco de scrips -->
     {% block 'scripts' %} {% endblock 'scripts' %}
 
     <title>{% block 'title' %} {% endblock 'title' %}</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'img/logo.png' %}">
 </head>
+
+<script>
+    function makeUrl(urlNova) {
+        var urlBase = "{{ BASE_URL }}";
+        var urlConcatenada = urlBase + "/" + urlNova;
+        return urlConcatenada
+    }
+</script>
 
 <body>
     <!-- layout -->

@@ -1,0 +1,93 @@
+/* Tamanhos padrão dos inputs (Para colocar na div com classe input-label-flutuante) */
+.grande {
+    max-width: 500px;
+}
+
+.medio {
+    max-width: 350px;
+}
+
+.pequeno {
+    max-width: 150px;
+}
+
+/* È preciso manipular o placeholder duas vezes pois alguns navegadores não aceitam a primeira forma*/
+::placeholder {
+    opacity: 0;
+}
+
+:-ms-input-placeholder {
+    opacity: 0;
+}
+
+.input-label-flutuante {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.descricao{
+
+    color: var(--main-color);
+
+}
+
+.input-label-flutuante textarea{
+
+    background-color: var(--contrast-color);
+    color: var(--main-color);
+    padding: 10px 15px;
+    width: 100%;
+    outline: none;
+    border: 2px solid var(--light-color);
+    border-radius: 10px;
+    font-size: 1.1rem;
+
+}
+
+
+.input-label-flutuante input{
+    background-color: var(--contrast-color);
+    color: var(--main-color);
+    padding: 10px 15px;
+    width: 100%;
+    outline: none;
+    border: 2px solid var(--light-color);
+    border-radius: 10px;
+    font-size: 1.1rem;
+}
+
+.input-label-flutuante input:-webkit-autofill,
+.input-label-flutuante input:-webkit-autofill:hover,
+.input-label-flutuante input:-webkit-autofill:focus {
+    border: 2px solid var(--light-color);
+    outline: none;
+    -webkit-text-fill-color: var(--main-color);
+    -webkit-box-shadow: 0 0 0 30px var(--contrast-color) inset;
+}
+
+.input-label-flutuante>label {
+    color: var(--main-color);
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 1.1rem;
+    transition: 0.5s ease;
+}
+
+.input-label-flutuante>input:focus+label,
+.input-label-flutuante>input:not(:placeholder-shown)+label {
+    color: var(--main-color);
+    background-color: var(--contrast-color);
+    position: absolute;
+    top: -10px;
+    font-size: 1rem;
+    padding: 0px 5px;
+}
+
+.input-label-flutuante>label span {
+    color: var(--danger-color);
+}
+
+.acoes {
+    margin-top: 20px;
+}

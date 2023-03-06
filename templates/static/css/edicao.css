@@ -25,7 +25,27 @@
     margin-bottom: 15px;
 }
 
-.input-label-flutuante input {
+.descricao, .imagem{
+
+    color: var(--main-color);
+
+}
+
+.input-label-flutuante textarea{
+
+    background-color: var(--contrast-color);
+    color: var(--main-color);
+    padding: 10px 15px;
+    width: 100%;
+    outline: none;
+    border: 2px solid var(--light-color);
+    border-radius: 10px;
+    font-size: 1.1rem;
+
+}
+
+
+.input-label-flutuante input{
     background-color: var(--contrast-color);
     color: var(--main-color);
     padding: 10px 15px;
@@ -70,4 +90,27 @@
 
 .acoes {
     margin-top: 20px;
+}
+
+/* Input imagem */
+
+.input-img{
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: transparent;
+    height: 35px;
+    
+    border-radius: 10px;
+    border: 2px solid var(--light-color);
+    padding: .2rem;
+
+}
+
+
+input[type="file"] {
+display: none;
 }
