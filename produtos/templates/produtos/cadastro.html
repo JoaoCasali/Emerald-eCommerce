@@ -7,14 +7,15 @@
 
 <link rel="stylesheet" href="{% static 'css/usuarios/login.css'%}">
 <link rel="stylesheet" href="{% static 'css/edicao.css'%}">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 <script src="{% static 'scripts/edicao.js'%}"></script>
 
 {% endblock 'scripts' %}
 
 {% block 'layout' %}
 
-<div class="conteudo">
+<div class="conteudo div-p">
     <div class="titulo">
         <h2>Cadastro Produto</h2>
     </div>
@@ -35,12 +36,13 @@
         <div class="col-md">
             <label class="descricao">Descrição</label>
             <div class="input-label-flutuante medio">
-                <textarea type="text" id="descricaoProduto" name="descricaoProduto" placeholder="Descrição do Produto" required ></textarea>
+                <textarea type="text" id="descricaoProduto" name="descricaoProduto" placeholder="Descrição do Produto"
+                    required></textarea>
             </div>
         </div>
         <div class="col-md">
             <label class="imagem">Imagem</label>
-            <div >
+            <div>
                 <label for="imagem" class="input-img">
                     <input type="file" id="imagem" name="imagem" accept="image/png, image/jpeg, image/gif" required>
                     <div class="nome-arquivo">Nenhum Arquivo Selecionado</div>
@@ -55,6 +57,5 @@
         </div>
     </form>
 </div>
-
 
 {% endblock 'layout' %}

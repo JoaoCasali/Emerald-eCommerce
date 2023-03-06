@@ -5,6 +5,6 @@ from django.conf import settings
 
 urlpatterns = [
 
-    path('Cadastro/', views.CadastroProduto, name='cadastroProduto'),
+    path('Cadastro/', views.Cadastro, name='cadastroProduto'),
     
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

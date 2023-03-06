@@ -7,7 +7,7 @@ from .models import Cliente
 
 def Cadastro(request):
     if request.method == "GET":
-        return render(request, 'cadastro.html')
+        return render(request, 'usuarios/cadastro.html')
 
     nomeCompleto = request.POST.get('nomeCompleto')
     cpf_cnpj = request.POST.get('cpf_cnpj')
@@ -16,7 +16,7 @@ def Cadastro(request):
 
     user = Cliente.objects.filter(email=email).first()
     if user:
-        return render(request, 'cadastro.html')
+        return render(request, 'usuarios/cadastro.html')
 
     cpfCnpjLimpo = [str(digit) for digit in cpf_cnpj if digit.isdigit()]
 
@@ -32,13 +32,13 @@ def Cadastro(request):
 
     user.save()
 
-    return render(request, 'login.html')
+    return render(request, 'usuarios/login.html')
 
 
 def Login(request):
     if request.method == "GET":
         current = request.build_absolute_uri('/')
-        return render(request, 'login.html')
+        return render(request, 'usuarios/login.html')
 
     email = request.POST.get('email')
     senha = request.POST.get('senha')
