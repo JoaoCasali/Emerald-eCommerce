@@ -80,8 +80,8 @@ def VerificarCNPJ(request):
         cnpj_limpo == "33333333333333" or cnpj_limpo == "44444444444444" or cnpj_limpo == "55555555555555" or
         cnpj_limpo == "66666666666666" or cnpj_limpo == "77777777777777" or cnpj_limpo == "88888888888888" or
         cnpj_limpo == "99999999999999" or len(cnpj_limpo) != 14):
-
-        return JsonResponse({"Resposta": False})
+       
+       return JsonResponse({"Resposta": False})
 
     try:
         sm = 0

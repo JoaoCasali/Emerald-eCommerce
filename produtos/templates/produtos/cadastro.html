@@ -7,24 +7,18 @@
 
 <link rel="stylesheet" href="{% static 'css/usuarios/login.css'%}">
 <link rel="stylesheet" href="{% static 'css/edicao.css'%}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 <script src="{% static 'scripts/edicao.js'%}"></script>
 
 {% endblock 'scripts' %}
 
-{% block 'content' %}
+{% block 'layout' %}
 
 <div class="conteudo">
     <div class="titulo">
         <h2>Cadastro Produto</h2>
     </div>
     <form action="{% url 'cadastro' %}" method="POST" id="cadastroProduto">{% csrf_token %}
-        <div class="col-md">
-            <label class="descricao">Descrição</label>
-            <div class="input-label-flutuante medio">
-                <textarea type="text" id="descricaoProduto" name="descricaoProduto" placeholder="Descrição do Produto"
-                    required></textarea>
-            </div>
-        </div>
         <div class="col-md">
             <div class="input-label-flutuante medio">
                 <input type="text" id="abrevproduto" name="abrevproduto" class="abrevproduto"
@@ -39,9 +33,21 @@
             </div>
         </div>
         <div class="col-md">
+            <label class="descricao">Descrição</label>
             <div class="input-label-flutuante medio">
-                <input type="file" id="imagem" name="imagem" accept="image/png, image/jpeg, image/gif" required>
-                <label for="imagem">Imagem</label>
+                <textarea type="text" id="descricaoProduto" name="descricaoProduto" placeholder="Descrição do Produto" required ></textarea>
+            </div>
+        </div>
+        <div class="col-md">
+            <label class="imagem">Imagem</label>
+            <div >
+                <label for="imagem" class="input-img">
+                    <input type="file" id="imagem" name="imagem" accept="image/png, image/jpeg, image/gif" required>
+                    <div class="nome-arquivo">Nenhum Arquivo Selecionado</div>
+                    <span class="material-symbols-outlined">
+                        open_in_new
+                    </span>
+                </label>
             </div>
         </div>
         <div class="col-md acoes">
@@ -50,4 +56,5 @@
     </form>
 </div>
 
-{% endblock 'content' %}
+
+{% endblock 'layout' %}
