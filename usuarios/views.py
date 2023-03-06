@@ -4,6 +4,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from .models import Cliente
 
+
 def Cadastro(request):
     if request.method == "GET":
         return render(request, 'cadastro.html')
@@ -17,7 +18,9 @@ def Cadastro(request):
     if user:
         return render(request, 'cadastro.html')
 
-    cpf_cnpj = ' '.join([int(digit) for digit in cpf_cnpj if digit.isdigit()])
+    cpfCnpjLimpo = [str(digit) for digit in cpf_cnpj if digit.isdigit()]
+
+    cpf_cnpj = ''.join(cpfCnpjLimpo)
 
     nome = nomeCompleto.split()[0]
     sobrenome = ' '.join(nomeCompleto.split()[1:])
@@ -34,6 +37,7 @@ def Cadastro(request):
 
 def Login(request):
     if request.method == "GET":
+        current = request.build_absolute_uri('/')
         return render(request, 'login.html')
 
     email = request.POST.get('email')
@@ -50,7 +54,8 @@ def Login(request):
         user = authenticate(request, username=email, password=senha)
         if user is not None:
             login(request, user)
-            return HttpResponse('Deu certo!')
+            return redirect('home')
+
 
     return HttpResponse('Usuário ou senha inválidos')
 
@@ -66,7 +71,6 @@ def Logout(request):
 
 
 def VerificarCNPJ(request):
-
     cnpj = request.GET.get('cnpj')
 
     cnpj_limpo = [int(char) for char in cnpj if char.isdigit()]
