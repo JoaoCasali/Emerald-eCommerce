@@ -23,11 +23,7 @@ $(document).ready(function () {
 
     // formatadores
     $('.decimal').blur(function () {
-<<<<<<< HEAD
         if($(this).val() == ''){
-=======
-        if ($(this).val() == '') {
->>>>>>> main
             return
         }
         var valor = parseFloat($(this).val()).toLocaleString('pt-BR', { minimumFractionDigits: 2 });
@@ -64,7 +60,6 @@ $(document).ready(function () {
         }
 
         $.ajax({
-<<<<<<< HEAD
             url: 'http://127.0.0.1:8000/auth/VerificarCNPJ?cnpj=' + value,
             type: 'GET',
             async: false,
@@ -78,21 +73,6 @@ $(document).ready(function () {
                 }
             },
             error: function(xhr, status, error) {
-=======
-            url: makeUrl("Auth/VerificarCNPJ?cnpj=") + value,
-            type: 'GET',
-            async: false,
-            dataType: 'json',
-            success: function (response) {
-                if (response.Resposta == false) {
-                    alert('CNPJ inválido');
-                    $('#cpf_cnpj').val('');
-                } else {
-                    $(this).val(formatted_value);
-                }
-            },
-            error: function (xhr, status, error) {
->>>>>>> main
                 alert(error);
             }
         });
@@ -109,3 +89,8 @@ function DefinirCampoComoOpcional(campo) {
     campo.next('label').find('span').remove();
 }
 
+$(function () {
+    $('#imagem').change(function() {
+         $('.nome-arquivo').html($(this).val());
+    });
+});

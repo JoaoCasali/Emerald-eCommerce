@@ -1,4 +1,4 @@
-{% extends 'index.html' %}
+{% extends 'Layout.html' %}
 {% load static %}
 
 {% block 'title' %}Cadastro Produto{% endblock 'title' %}
@@ -7,6 +7,7 @@
 
 <link rel="stylesheet" href="{% static 'css/usuarios/login.css'%}">
 <link rel="stylesheet" href="{% static 'css/edicao.css'%}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 <script src="{% static 'scripts/edicao.js'%}"></script>
 
 {% endblock 'scripts' %}
@@ -20,13 +21,14 @@
     <form action="{% url 'cadastro' %}" method="POST" id="cadastroProduto">{% csrf_token %}
         <div class="col-md">
             <div class="input-label-flutuante medio">
-                <input type="text" id="abrevproduto" name="abrevproduto" class="abrevproduto"  placeholder="Abreviação do Produto" required>
+                <input type="text" id="abrevproduto" name="abrevproduto" class="abrevproduto"
+                    placeholder="Abreviação do Produto" required>
                 <label for="abrevproduto">Abreviação</label>
             </div>
         </div>
         <div class="col-md">
             <div class="input-label-flutuante medio">
-                <input type="text" class="decimal" id="preco" name="preco" placeholder="Digite o Preço" required >
+                <input type="text" class="decimal" id="preco" name="preco" placeholder="Digite o Preço" required>
                 <label for="preco">Preço</label>
             </div>
         </div>
@@ -39,7 +41,13 @@
         <div class="col-md">
             <label class="imagem">Imagem</label>
             <div >
-                <input type="file" id="imagem" name="imagem" accept="image/png, image/jpeg, image/gif" required>    
+                <label for="imagem" class="input-img">
+                    <input type="file" id="imagem" name="imagem" accept="image/png, image/jpeg, image/gif" required>
+                    <div class="nome-arquivo">Nenhum Arquivo Selecionado</div>
+                    <span class="material-symbols-outlined">
+                        open_in_new
+                    </span>
+                </label>
             </div>
         </div>
         <div class="col-md acoes">
