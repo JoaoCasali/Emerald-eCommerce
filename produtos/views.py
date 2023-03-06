@@ -10,3 +10,6 @@ def product_list(request):
 #     numbers = [1, 2, 3, 4, 5]
 #     context = {'numbers': numbers}
 #     return render(request, 'listagem.html', context)
+def CadastroProduto(request):
+    if request.method == "GET":
+        return render(request, 'cadastro1.html')
