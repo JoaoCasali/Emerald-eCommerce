@@ -6,3 +6,6 @@ def Home(request):
 
 def Sobre(request):
     return render(request, 'sobre.html')
+
+def PageNotFound(request, ex):
+    return render(request, 'notFound.html')
