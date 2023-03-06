@@ -7,7 +7,7 @@ from .models import Cliente
 
 def Cadastro(request):
     if request.method == "GET":
-        return render(request, 'cadastro.html')
+        return render(request, 'usuarios/cadastro.html')
 
     nomeCompleto = request.POST.get('nomeCompleto')
     cpf_cnpj = request.POST.get('cpf_cnpj')
@@ -16,7 +16,7 @@ def Cadastro(request):
 
     user = Cliente.objects.filter(email=email).first()
     if user:
-        return render(request, 'cadastro.html')
+        return render(request, 'usuarios/cadastro.html')
 
     cpfCnpjLimpo = [str(digit) for digit in cpf_cnpj if digit.isdigit()]
 
@@ -32,13 +32,13 @@ def Cadastro(request):
 
     user.save()
 
-    return render(request, 'login.html')
+    return render(request, 'usuarios/login.html')
 
 
 def Login(request):
     if request.method == "GET":
         current = request.build_absolute_uri('/')
-        return render(request, 'login.html')
+        return render(request, 'usuarios/login.html')
 
     email = request.POST.get('email')
     senha = request.POST.get('senha')
@@ -80,8 +80,8 @@ def VerificarCNPJ(request):
         cnpj_limpo == "33333333333333" or cnpj_limpo == "44444444444444" or cnpj_limpo == "55555555555555" or
         cnpj_limpo == "66666666666666" or cnpj_limpo == "77777777777777" or cnpj_limpo == "88888888888888" or
         cnpj_limpo == "99999999999999" or len(cnpj_limpo) != 14):
-
-        return JsonResponse({"Resposta": False})
+       
+       return JsonResponse({"Resposta": False})
 
     try:
         sm = 0
