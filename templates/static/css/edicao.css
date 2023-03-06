@@ -25,7 +25,7 @@
     margin-bottom: 15px;
 }
 
-.descricao{
+.descricao, .imagem{
 
     color: var(--main-color);
 
