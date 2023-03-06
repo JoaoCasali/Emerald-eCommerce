@@ -91,3 +91,26 @@
 .acoes {
     margin-top: 20px;
 }
+
+/* Input imagem */
+
+.input-img{
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: transparent;
+    height: 35px;
+    
+    border-radius: 10px;
+    border: 2px solid var(--light-color);
+    padding: .2rem;
+
+}
+
+
+input[type="file"] {
+display: none;
+}
