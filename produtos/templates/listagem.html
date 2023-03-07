@@ -1,23 +1,28 @@
-{% extends 'LayoutEdicao.html' %}
+{% extends 'Layout.html' %}
 {% load static %}
 
 {% block 'title' %}Produtos{% endblock 'title' %}
-
 {% block 'scripts' %}
 <link rel="stylesheet" href="{% static 'css/usuarios/login.css'%}">
 <link rel="stylesheet" href="{% static 'css/edicao.css'%}">
 <script src="{% static 'scripts/edicao.js'%}"></script>
-
 {% endblock 'scripts' %}
 
-{% block 'layout' %}
-
-<div class="conteudo">
-    <div class="titulo">
-        <h2>Produtos</h2>
+{% block 'content' %}
+<div class="title">
+    <h2>Produtos</h2>
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{  value.imagem.url  }}" alt="Imagem">
+        <div class="card-body">
+            <h5 class="card-title">{{value.abreviacao}}</h5>
+            <h5 class="card-title">{{value.preco}}</h5>
+            <p class="card-text">{{value.descricao}}</p>
+            <a href="#" class="btn btn-primary">Comprar</a>
+        </div>
     </div>
-
-<table class="table table-striped">
+</div>
+{% endblock 'content' %}
+<!-- <table class="table table-striped">
     <thead class="thead-dark">
         <tr>
             <th scope="col">ID</th>
@@ -39,8 +44,4 @@
         </tr>
     {% endfor %}
     </tbody>
-</table>
-
-</div>
-
-{% endblock 'layout' %}
+</table> -->
