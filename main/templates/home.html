@@ -1,8 +1,32 @@
-{% extends 'Layout.html' %}
+{% extends 'Layout.html' %} 
+
 {% load static %}
 
-{% block 'title'%}Home{% endblock 'title' %}
+{% block 'title'%}Home{% endblock 'title' %} 
+{% block 'scripts' %}
+
+<link rel="stylesheet" href="{% static 'css/main/home.css'%}">
+
+{% endblock 'scripts' %}
 
 {% block 'content' %}
 
+<section class="flex-section">
+  <div class="left-side">
+    <h1 class="title-home">E-merald o melhor Ecomerce do seu jeito</h1>
+    <p class="p-home">
+      Bem-vindo ao E-merald, a plataforma ideal para hospedar a sua loja online
+      de maneira simples e eficiente!
+    </p>
+   <div class="btn-tri"> 
+    <button class="register-btn">Cadastre-se</button>
+    <img class="boomerang"src= "{% static 'img/VectorHome2.png' %}" alt="">
+   </div>
+  </div>
+  <div class="right-side">
+    <img width="350" src= "{% static 'img/VectorHome.png' %}" alt="">
+  </div>
+</section>
+
 {% endblock 'content' %}
+    
