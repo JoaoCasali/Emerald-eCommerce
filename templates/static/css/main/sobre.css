@@ -1,0 +1,40 @@
+.titulo-maior, .titulo-medio, .titulo-menor, p {
+    color: black;
+    margin: 50px auto;
+    padding: 10px;
+    text-align: center;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.titulo-maior {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.titulo-medio {
+    font-size: 34px;
+    font-weight: bold;
+}
+
+.titulo-menor {
+    font-size: 24;
+    font-weight: bold;
+}
+
+p {
+    width: 900px;
+    font-size: 18px;
+    text-align: justify;
+}
+
+.apresentacao, .desenvolvedores, .produto {
+    width: 100%;
+}
+
+.img-desenvolvedores {
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    display: block;
+    box-shadow: 0 0 10px 10px #e9e9e9;
+}
