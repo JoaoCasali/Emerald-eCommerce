@@ -2,7 +2,7 @@ from django.db import models
 from uuid import uuid4
 
 def upload_imagem_produto(produto, nomeArquivo):
-    return f"produto/{uuid4()}_produto"
+    return f"produto/{uuid4()}_produto.png"
 
 class Produto(models.Model):
     id = models.AutoField(primary_key=True, null=False)
