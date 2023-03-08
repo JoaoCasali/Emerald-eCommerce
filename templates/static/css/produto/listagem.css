@@ -1,0 +1,16 @@
+.h2 {
+    margin-top: 20px;
+    margin: 10px;
+}
+
+.card {
+    display: flex;
+    /* define o elemento pai como flex container */
+    flex-direction: row;
+    /* define a direção dos itens como horizontal */
+    justify-content: space-between;
+}
+
+.card-img-top {
+    max-height: 210px;
+}

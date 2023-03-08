@@ -9,39 +9,16 @@
 {% endblock 'scripts' %}
 
 {% block 'content' %}
-<div class="title">
-    <h2>Produtos</h2>
-    <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="{{  value.imagem.url  }}" alt="Imagem">
-        <div class="card-body">
-            <h5 class="card-title">{{value.abreviacao}}</h5>
-            <h5 class="card-title">{{value.preco}}</h5>
-            <p class="card-text">{{value.descricao}}</p>
-            <a href="#" class="btn btn-primary">Comprar</a>
-        </div>
+<h2>Produtos</h2>
+{% for value in List%}
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="{{  value.imagem.url  }}" alt="Imagem">
+    <div class="card-body">
+        <h5 class="card-title">{{value.abreviacao}}</h5>
+        <h5 class="card-title">{{value.preco}}</h5>
+        <p class="card-text">{{value.descricao}}</p>
+        <a href="#" class="btn btn-primary">Comprar</a>
     </div>
 </div>
+{% endfor %}
 {% endblock 'content' %}
-<!-- <table class="table table-striped">
-    <thead class="thead-dark">
-        <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Produto</th>
-            <th scope="col">Preço</th>
-            <th scope="col">Descrição</th>
-            <th scope="col">Imagem</th>
-        </tr>
-    </thead>
-
-    <tbody>
-    {% for value in List %}
-        <tr>
-            <th scope="row">{{value.id}}</th>
-            <th>{{value.abreviacao}}</th>
-            <th>{{value.preco}}</th>
-            <th>{{value.descricao}}</th>
-            <th>{{value.imagem}}</th>
-        </tr>
-    {% endfor %}
-    </tbody>
-</table> -->
