@@ -27,6 +27,6 @@ def Cadastro(request):
     novo_produto = Produto(abreviacao=abreviacao, preco=valor_decimal, descricao=descricao, imagem=imagem)
     novo_produto.save()
 
-    return redirect('http://127.0.0.1:8000/Home/')
+    return redirect('home')
 
 
