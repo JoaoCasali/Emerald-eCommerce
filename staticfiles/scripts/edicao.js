@@ -60,7 +60,7 @@ $(document).ready(function () {
         }
 
         $.ajax({
-            url: makeUrl("Auth/VerificarCNPJ?cnpj=") + value,
+            url: makeUrl('Auth/VerificarCNPJ?cnpj=') + value,
             type: 'GET',
             async: false,
             dataType: 'json',
@@ -88,3 +88,9 @@ function DefinirCampoComoOpcional(campo) {
     campo.removeAttr('required');
     campo.next('label').find('span').remove();
 }
+
+$(function () {
+    $('#imagem').change(function () {
+        $('.nome-arquivo').html($(this).val());
+    });
+});

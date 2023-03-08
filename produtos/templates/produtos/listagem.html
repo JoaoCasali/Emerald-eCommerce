@@ -1,0 +1,27 @@
+{% extends 'Layout.html' %}
+{% load static %}
+
+{% block 'title' %}Produtos{% endblock 'title' %}
+{% block 'scripts' %}
+<link rel="stylesheet" href="{% static 'css/usuarios/login.css'%}">
+<link rel="stylesheet" href="{% static 'css/edicao.css'%}">
+<script src="{% static 'scripts/edicao.js'%}"></script>
+{% endblock 'scripts' %}
+
+{% block 'content' %}
+<h2>Produtos</h2>
+
+{% for value in List %}
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="{{  value.imagem.url  }}" alt="Imagem">
+    <div class="card-body">
+        <h5 class="card-title">{{value.abreviacao}}</h5>
+        <h5 class="card-title">{{value.preco}}</h5>
+        <p class="card-text">{{value.descricao}}</p>
+        <a href="#" class="btn btn-primary">Comprar</a>
+    </div>
+</div>
+</div>
+{% endfor %}
+
+{% endblock 'content' %}

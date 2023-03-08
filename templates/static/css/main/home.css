@@ -1,0 +1,56 @@
+
+section.flex-section{
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+div.left-side{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+
+    margin: 2rem 1rem;
+}
+div.right-side{
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+    width: 47%;
+}
+.title-home{
+    margin-bottom: 2rem;
+}
+
+.register-btn {
+
+    color: #fff;
+    background-color: #8ABB48;
+    border: solid 1px #8ABB48;
+
+    padding: 1rem 4.5rem;
+    border-radius: 4rem;
+
+    display: inline-block;
+    vertical-align: bottom;
+
+}
+.register-btn:hover {
+    color: #fff;
+    background-color: #7ead41;
+    border: solid 1px #8ABB48;
+
+}
+
+.btn-tri {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+    vertical-align: bottom;
+    }

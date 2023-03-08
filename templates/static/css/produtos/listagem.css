@@ -1,0 +1,13 @@
+.h2 {
+    margin: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card-img-top {
+    max-width: 230px;
+}
