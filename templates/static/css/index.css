@@ -13,6 +13,7 @@
 * {
     padding: 0px;
     margin: 0px;
+    box-sizing: border-box;
 }
 
 body {
@@ -78,14 +79,40 @@ a:hover {
 .divisor {
     background: white;
     height: 100vh;
+    overflow-y: auto;
     margin-left: 70px;
     border-left: 4px solid var(--main-color);
     box-shadow: -2px 10px 30px var(--light-color);
 }
 
+.div-p {
+    width: 25%;
+}
+
+.div-m {
+    width: 50%;
+}
+
+.div-g {
+    width: 75%;
+}
+
+
 @media (max-width: 991px) {
     .divisor {
         margin-left: 0;
         border-left: none;
+    }
+
+    .div-p {
+        width: 90%;
+    }
+
+    .div-m {
+        width: 90%;
+    }
+
+    .div-g {
+        width: 90%;
     }
 }
