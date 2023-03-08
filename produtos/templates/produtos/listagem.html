@@ -9,19 +9,20 @@
 {% endblock 'scripts' %}
 
 {% block 'content' %}
-<h2>Produtos</h2>
-
-{% for value in List %}
-<div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="{{  value.imagem.url  }}" alt="Imagem">
-    <div class="card-body">
-        <h5 class="card-title">{{value.abreviacao}}</h5>
-        <h5 class="card-title">{{value.preco}}</h5>
-        <p class="card-text">{{value.descricao}}</p>
-        <a href="#" class="btn btn-primary">Comprar</a>
+<h2 style="margin: 20px;">Produtos</h2>
+<div class="conteudo"
+    style="display: flex; background-color: white; border-radius: 0px; box-shadow: 0px 0px 0px 0px #fff;">
+    {% for value in List %}
+    <div class="card" style="width: 18rem; margin: 20px; display: flex;">
+        <img class="card-img-top" src="{{  value.imagem.url  }}" alt="Imagem" style="max-height: 210px;">
+        <div class="card-body">
+            <h5 class="card-title">{{value.abreviacao}}</h5>
+            <h5 class="card-title">R$ {{value.preco}}</h5>
+            <p class="card-text">{{value.descricao}}</p>
+            <a href="#" class="btn btn-primary">Comprar</a>
+        </div>
     </div>
+    {% endfor %}
 </div>
-</div>
-{% endfor %}
 
 {% endblock 'content' %}
