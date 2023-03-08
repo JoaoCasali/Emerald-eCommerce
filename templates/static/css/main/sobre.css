@@ -16,9 +16,11 @@ div.flex-box div:first-child{
     justify-content: center;
     align-items: center;
     text-align: justify;
+    
 }
-div.flex-box div:first-child h3{
-    margin: 2rem 4rem;
+div.flex-box div h3{
+    font-size: 2.4rem;    
+    margin: 2rem 0rem;
 
 }
 
@@ -32,9 +34,6 @@ div.flex-box div:nth-child(2){
     align-items: center;
     
 }
-div.flex-box div:nth-child(2) h3{
-    margin: 2rem 4rem;
-}
 
 div.flex-box div:last-child{
     margin: 2rem 4rem;
@@ -47,7 +46,4 @@ div.flex-box div:last-child{
     align-items: center;
     
 }
-div.flex-box div:last-child h3{
-    margin: 2rem 4rem;
 
-}

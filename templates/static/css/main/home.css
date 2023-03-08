@@ -24,6 +24,7 @@ div.right-side{
 }
 .title-home{
     margin-bottom: 2rem;
+    font-size: 3rem;
 }
 
 .register-btn {
@@ -38,6 +39,7 @@ div.right-side{
     display: inline-block;
     vertical-align: bottom;
 
+    font-size: 1.2rem;
 }
 .register-btn:hover {
     color: #fff;
@@ -54,3 +56,7 @@ div.right-side{
 
     vertical-align: bottom;
     }
+
+.p-home{
+    font-size: 1.2rem;
+}
