@@ -19,7 +19,7 @@
     <div class="titulo">
         <h2>Cadastro Produto</h2>
     </div>
-    <form action="{% url 'cadastro' %}" method="POST" id="cadastroProduto">{% csrf_token %}
+    <form action="{% url 'cadastroProduto' %}" method="POST" enctype="multipart/form-data" id="cadastroProduto">{% csrf_token %}
         <div class="col-md">
             <div class="input-label-flutuante medio">
                 <input type="text" id="abrevproduto" name="abrevproduto" class="abrevproduto"
@@ -53,7 +53,7 @@
             </div>
         </div>
         <div class="col-md acoes">
-            <button type="submit" form="cadastro" class="btn btn-success">Cadastrar Produto</button>
+            <button type="submit" form="cadastroProduto" class="btn btn-success">Cadastrar Produto</button>
         </div>
     </form>
 </div>
