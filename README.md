@@ -56,10 +56,14 @@ $ python manage.py runserver
 
 <h3> 💻 Autores 💻 </h3>
 
-<ol>
-    <li>Alejandro Silveira</li>
-    <li>Felipe Weiss</li>
-    <li>João Casali</li>
-    <li>Márcio Lourenço</li>
-    <li>Melissa Konig</li>
-</ol>
+<a href="https://github.com/alejandrosilveiraramos">Alejandro Silveira</a><br>
+<a href="https://github.com/FelipeWeiss1992">Felipe Weiss</a><br>
+<a href="https://github.com/JoaoCasali">João Casali</a><br>
+<a href="https://github.com/marciolou">Márcio Lourenço</a><br>
+<a href="https://github.com/MelissaKonig">Melissa Konig</a>
+
+<h3> :pager: Link :pager: </h3>
+
+<p>Nosso site ja está na nuvem, <a href="https://e-merald.up.railway.app/Home/">clique aqui</a> para acessar.</p>
+
+<p>Se estiver fora do ar, peço desculpa, nossa internet ainda é discada...</p>
