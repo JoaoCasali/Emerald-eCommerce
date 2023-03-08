@@ -3,13 +3,13 @@
 
 {% block 'title' %}Produtos{% endblock 'title' %}
 {% block 'scripts' %}
-<link rel="stylesheet" href="{% static 'css/usuarios/login.css'%}">
 <link rel="stylesheet" href="{% static 'css/edicao.css'%}">
 <script src="{% static 'scripts/edicao.js'%}"></script>
 {% endblock 'scripts' %}
 
 {% block 'content' %}
 <h2 style="margin: 20px;">Produtos</h2>
+
 <div class="conteudo"
     style="display: flex; background-color: white; border-radius: 0px; box-shadow: 0px 0px 0px 0px #fff;">
     {% for value in List %}
