@@ -7,4 +7,5 @@ urlpatterns = [
     path('AlgumaCoisa/', views.AlgumaCoisa, name='AlgumaCoisa'),
     path('VerificarCNPJ/', views.VerificarCNPJ, name='VerificarCNPJ'),
     path('logout/', views.Logout, name='logout'),
+    path('LoginInvalid/', views.Login, name='loginInvalid'),
 ]
