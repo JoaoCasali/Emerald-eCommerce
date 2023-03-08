@@ -28,7 +28,7 @@ h2,
 h3,
 h4 {
     color: var(--main-color);
-    margin: 0px;
+    margin: auto;
 }
 
 a,
