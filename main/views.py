@@ -1,11 +1,10 @@
-from django.http import HttpResponse
 from django.shortcuts import render
 
 def Home(request):
-    return render(request, 'home.html')
+    return render(request, 'main/home.html')
 
 def Sobre(request):
-    return render(request, 'sobre.html')
+    return render(request, 'main/sobre.html')
 
-def PageNotFound(request, ex):
-    return render(request, 'notFound.html')
+def PageNotFound(request, exception = None):
+    return render(request, 'main/notFound.html')
