@@ -93,11 +93,11 @@ STATIC_URL = 'static/'
 
 # Caminho dos arquivos estáticos dentro do projeto
 STATICFILES_DIRS = [
-    BASE_DIR / 'templates/static'
+    os.path.join(BASE_DIR, 'templates/static')
 ]
 
 # Caminho dos arquivos estáticos da produção
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Onde é salvo os arquivos de media salvos pelo usuário
 MEDIA_URL = 'media/'
